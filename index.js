@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const cors = require('cors');
 
+const port = 3000;
+app.use(cors());
 // Generate a random message
 const getRandomMessage = () => {
   const messages = [
