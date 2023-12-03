@@ -11,8 +11,6 @@ const getRandomMessage = () => {
     'Welcome to the React app!',
     'Random message here!',
     'Have a great day!',
-    'dire',
-    'dire2'
   ];
   const randomIndex = Math.floor(Math.random() * messages.length);
   return messages[randomIndex];
