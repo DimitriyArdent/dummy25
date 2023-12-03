@@ -1,20 +1,16 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const { Client } = require('pg');
 
-const port = 3001   ;
+const port = 3000;
 app.use(cors());
-
- 
-
 // Generate a random message
 const getRandomMessage = () => {
   const messages = [
-     'Welcome to the React app!',
+    'Hello from the server!',
+    'Welcome to the React app!',
     'Random message here!',
-    'Have a great day!!',
-    'shadowflex',
+    'Have a great day!',
   ];
   const randomIndex = Math.floor(Math.random() * messages.length);
   return messages[randomIndex];
@@ -24,7 +20,6 @@ const getRandomMessage = () => {
 app.get('/hello', (req, res) => {
   const randomMessage = getRandomMessage();
   res.send(randomMessage);
- 
 });
 
 // Start the server
